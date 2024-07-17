@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Online Particular Renewal System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Online Particular Renewal System</h1>
+        </div>
+    </header>
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="user_dashboard.html">Dashboard</a></li>
+                <li><a href="user_profile.html">My Profile</a></li>
+                <li><a href="user_renewal_requests.html">Renewal Requests</a></li>
+                <li><a href="index.html">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="main-content">
+            <h2>Payment</h2>
+            <div id="renewal-summary">
+                <h3>Renewal Summary</h3>
+                <p>Renewal Type: <span id="summary-type"></span></p>
+                <p>Vehicle Type: <span id="summary-vehicle-type"></span></p>
+                <p>Expiry Date: <span id="summary-expiry"></span></p>
+                <p>Total Amount: $<span id="summary-amount"></span></p>
+            </div>
+            <form action="print_license.html" method="POST">
+                <div class="form-group">
+                    <label for="card_number">Card Number:</label>
+                    <input type="text" id="card_number" name="card_number" required>
+                </div>
+                <div class="form-group">
+                    <label for="expiry_date">Card Expiry Date:</label>
+                    <input type="text" id="expiry_date" name="expiry_date" placeholder="MM/YY" required>
+                </div>
+                <div class="form-group">
+                    <label for="cvv">CVV:</label>
+                    <input type="text" id="cvv" name="cvv" required>
+                </div>
+                <button type="submit" class="btn">Pay Now</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Online Particular Renewal System. All rights reserved.</p>
+    </footer>
+    <script>
+        // In a real application, you would populate these values from the server
+        document.getElementById('summary-type').textContent = "Vehicle Particular";
+        document.getElementById('summary-vehicle-type').textContent = "Motorcycle";
+        document.getElementById('summary-expiry').textContent = "2025-07-14";
+        document.getElementById('summary-amount').textContent = "50.00";
+    </script>
+</body>
+</html>

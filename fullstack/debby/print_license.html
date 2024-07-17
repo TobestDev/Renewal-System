@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print License - Online Particular Renewal System</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.0/dist/JsBarcode.all.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Online Particular Renewal System</h1>
+        </div>
+    </header>
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="user_dashboard.html">Dashboard</a></li>
+                <li><a href="user_profile.html">My Profile</a></li>
+                <li><a href="user_renewal_requests.html">Renewal Requests</a></li>
+                <li><a href="index.html">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="main-content">
+            <h2>Print Your New License</h2>
+            <div id="license-container">
+                <div id="license-details">
+                    <h3>License Details</h3>
+                    <p>Name: <span id="license-name">John Doe</span></p>
+                    <p>License Type: <span id="license-type">Vehicle Particular</span></p>
+                    <p>Vehicle Type: <span id="license-vehicle-type">Motorcycle</span></p>
+                    <p>License Number: <span id="license-number">VP12345678</span></p>
+                    <p>Issue Date: <span id="license-issue-date">2024-07-14</span></p>
+                    <p>Expiry Date: <span id="license-expiry-date">2025-07-14</span></p>
+                    <svg id="barcode"></svg>
+                </div>
+                
+                <!-- <div id="barcode-container">
+                    <svg id="barcode"></svg>
+                </div> -->
+            </div>
+            <button onclick="window.print()" class="btn">Print License</button>
+            <a href="user_dashboard.html" class="btn">Back to Dashboard</a>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Online Particular Renewal System. All rights reserved.</p>
+    </footer>
+    <script>
+        // In a real application, you would populate these values from the server
+        const licenseData = {
+            name: "John Doe",
+            type: "Vehicle Particular",
+            vehicleType: "Motorcycle",
+            number: "VP12345678",
+            issueDate: "2024-07-14",
+            expiryDate: "2025-07-14"
+        };
+
+        document.getElementById('license-name').textContent = licenseData.name;
+        document.getElementById('license-type').textContent = licenseData.type;
+        document.getElementById('license-vehicle-type').textContent = licenseData.vehicleType;
+        document.getElementById('license-number').textContent = licenseData.number;
+        document.getElementById('license-issue-date').textContent = licenseData.issueDate;
+        document.getElementById('license-expiry-date').textContent = licenseData.expiryDate;
+
+        // Generate barcode
+        const barcodeData = `${licenseData.number}|${licenseData.name}|${licenseData.type}|${licenseData.vehicleType}|${licenseData.issueDate}|${licenseData.expiryDate}`;
+        JsBarcode("#barcode", barcodeData, {
+            format: "CODE128",
+            width: 1,
+            height: 100,
+            displayValue: false
+        });
+    </script>
+</body>
+</html>

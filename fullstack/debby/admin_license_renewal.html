@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driving License Renewal - Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Online Particular Renewal System</h1>
+        </div>
+    </header>
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="admin_dashboard.html">Dashboard</a></li>
+                <li><a href="admin_license_renewal.html">Driving License Renewal</a></li>
+                <li><a href="admin_manage_users.html">Manage Users</a></li>
+                <li><a href="admin_renewal_requests.html">Renewal Requests</a></li>
+                <li><a href="admin_reports.html">Reports</a></li>
+                <li><a href="index.html">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="main-content">
+            <h2>Driving License Renewal Management</h2>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="license_number">License Number:</label>
+                    <input type="text" id="license_number" name="license_number" required>
+                </div>
+                <div class="form-group">
+                    <label for="expiry_date">Expiry Date:</label>
+                    <input type="date" id="expiry_date" name="expiry_date" required>
+                </div>
+                <div class="form-group">
+                    <label for="renewal_period">Renewal Period:</label>
+                    <select id="renewal_period" name="renewal_period" required>
+                        <option value="1">1 Year</option>
+                        <option value="3">3 Years</option>
+                        <option value="5">5 Years</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn">Process Renewal</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Online Particular Renewal System. All rights reserved.</p>
+    </footer>
+</body>
+</html>

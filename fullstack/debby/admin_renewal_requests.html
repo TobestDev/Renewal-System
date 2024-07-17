@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renewal Requests - Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Online Particular Renewal System</h1>
+        </div>
+    </header>
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="admin_dashboard.html">Dashboard</a></li>
+                <li><a href="admin_license_renewal.html">Driving License Renewal</a></li>
+                <li><a href="admin_manage_users.html">Manage Users</a></li>
+                <li><a href="admin_renewal_requests.html">Renewal Requests</a></li>
+                <li><a href="admin_reports.html">Reports</a></li>
+                <li><a href="index.html">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="main-content">
+            <h2>Renewal Requests</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Request ID</th>
+                        <th>User</th>
+                        <th>Renewal Type</th>
+                        <th>Submission Date</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1001</td>
+                        <td>johndoe</td>
+                        <td>Driving License</td>
+                        <td>2024-07-01</td>
+                        <td>Pending</td>
+                        <td>
+                            <button class="btn btn-small">Approve</button>
+                            <button class="btn btn-small btn-danger">Reject</button>
+                        </td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Online Particular Renewal System. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports - Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Online Particular Renewal System</h1>
+        </div>
+    </header>
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="admin_dashboard.html">Dashboard</a></li>
+                <li><a href="admin_license_renewal.html">Driving License Renewal</a></li>
+                <li><a href="admin_manage_users.html">Manage Users</a></li>
+                <li><a href="admin_renewal_requests.html">Renewal Requests</a></li>
+                <li><a href="admin_reports.html">Reports</a></li>
+                <li><a href="index.html">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="main-content">
+            <h2>Reports</h2>
+            <div class="report-section">
+                <h3>User Registration Statistics</h3>
+                <p>Total Users: 500</p>
+                <p>New Users This Month: 50</p>
+            </div>
+            <div class="report-section">
+                <h3>Renewal Statistics</h3>
+                <p>Total Renewals: 1000</p>
+                <p>Pending Renewals: 100</p>
+                <p>Completed Renewals: 900</p>
+            </div>
+            <div class="report-section">
+                <h3>Generate Custom Report</h3>
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="report_type">Report Type:</label>
+                        <select id="report_type" name="report_type" required>
+                            <option value="user">User Report</option>
+                            <option value="renewal">Renewal Report</option>
+                            <option value="financial">Financial Report</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="start_date">Start Date:</label>
+                        <input type="date" id="start_date" name="start_date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="end_date">End Date:</label>
+                        <input type="date" id="end_date" name="end_date" required>
+                    </div>
+                    <button type="submit" class="btn">Generate Report</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Online Particular Renewal System. All rights reserved.</p>
+    </footer>
+</body>
+</html>
